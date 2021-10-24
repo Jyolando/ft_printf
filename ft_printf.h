@@ -6,7 +6,7 @@
 /*   By: jyolando <jyolando@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 09:19:21 by jyolando          #+#    #+#             */
-/*   Updated: 2021/10/24 18:11:24 by jyolando         ###   ########.fr       */
+/*   Updated: 2021/10/24 18:26:51 by jyolando         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,21 +18,22 @@
 # include <stdlib.h>
 # include "Libft/libft.h"
 
-int ft_putchar(char c);
-int	ft_putstr(char *str);
+int		ft_putchar(char c);
+int		ft_putstr(char *str);
 
-int	ft_itoa(int n);
-int	ft_us_itoa(unsigned int num);
+int		ft_itoa(int n);
+int		ft_us_itoa(unsigned int num);
 
-int	ft_right_flags(char *input, int i);
-int ft_read_flags(char *input, int i, va_list *list);
+int		ft_right_flags(char *input, int i);
+int		ft_read_flags(char *input, int i, va_list *list);
 
 char	*ft_num_to_base(unsigned long long num, int base);
-int	ft_pointer(unsigned long long num);
-int	ft_dec_to_uint(unsigned int num);
-int	ft_dec_to_hex(unsigned int num, int low);
 
-int ft_read_input(char *input, va_list *list);
-int ft_printf(const char *input, ...);
+int		ft_pointer(unsigned long long num);
+int		ft_dec_to_uint(unsigned int num);
+int		ft_dec_to_hex(unsigned int num, int low);
+
+int		ft_read_input(char *input, va_list *list);
+int		ft_printf(const char *input, ...);
 
 #endif

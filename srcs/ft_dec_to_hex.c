@@ -6,7 +6,7 @@
 /*   By: jyolando <jyolando@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 15:35:48 by jyolando          #+#    #+#             */
-/*   Updated: 2021/10/23 17:16:45 by jyolando         ###   ########.fr       */
+/*   Updated: 2021/10/24 18:24:43 by jyolando         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static char	*ft_low_hex(char *based)
 			based[i] += 32;
 		i++;
 	}
-
 	return (based);
 }
 

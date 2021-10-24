@@ -6,7 +6,7 @@
 /*   By: jyolando <jyolando@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 21:20:45 by jyolando          #+#    #+#             */
-/*   Updated: 2021/10/24 18:17:55 by jyolando         ###   ########.fr       */
+/*   Updated: 2021/10/24 18:23:15 by jyolando         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,15 @@ int	ft_right_flags(char *input, int i)
 	return (0);
 }
 
-int ft_read_flags(char *input, int i, va_list *list)
+int	ft_read_flags(char *input, int i, va_list *list)
 {
 	if (input[i] == 'c')
 		return (ft_putchar(va_arg(*list, int)));
 	if (input[i] == 's')
 		return (ft_putstr(va_arg(*list, char *)));
 	if (input[i] == 'p')
-		return (ft_pointer((unsigned long long)va_arg(*list, unsigned long long)));
+		return (ft_pointer((unsigned long long)va_arg(*list,
+					unsigned long long)));
 	if (input[i] == 'd' || input[i] == 'i')
 		return (ft_itoa(va_arg(*list, int)));
 	if (input[i] == 'u')

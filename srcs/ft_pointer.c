@@ -6,7 +6,7 @@
 /*   By: jyolando <jyolando@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 17:11:04 by jyolando          #+#    #+#             */
-/*   Updated: 2021/10/23 17:19:53 by jyolando         ###   ########.fr       */
+/*   Updated: 2021/10/24 18:23:41 by jyolando         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ static char	*ft_low_hex(char *based)
 			based[i] += 32;
 		i++;
 	}
-
 	return (based);
 }
 
@@ -35,7 +34,7 @@ int	ft_pointer(unsigned long long num)
 	size = 0;
 	size += ft_putstr("0x");
 	if (!num)
-		return(size + ft_putchar('0'));
+		return (size + ft_putchar('0'));
 	pointer = ft_num_to_base(num, 16);
 	size += ft_putstr(ft_low_hex(pointer));
 	free(pointer);

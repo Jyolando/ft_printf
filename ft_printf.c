@@ -6,17 +6,17 @@
 /*   By: jyolando <jyolando@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 00:28:20 by                   #+#    #+#             */
-/*   Updated: 2021/10/21 10:10:31 by jyolando         ###   ########.fr       */
+/*   Updated: 2021/10/24 18:26:01 by jyolando         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //#include "./Libft/libft.h"
 #include "ft_printf.h"
 
-int ft_read_input(char *input, va_list *list)
+int	ft_read_input(char *input, va_list *list)
 {
-	int count;
-	int i;
+	int	count;
+	int	i;
 
 	count = 0;
 	i = 0;
@@ -27,11 +27,11 @@ int ft_read_input(char *input, va_list *list)
 		if (input[i] == '%' && input[i + 1])
 		{
 			if (!ft_right_flags(input, ++i))
-				break;
+				break ;
 			count += ft_read_flags(input, i, &(*list));
 		}
 		else if (input[i] == '%' && !input[i + 1])
-			break;
+			break ;
 		else
 			count += ft_putchar(input[i]);
 		i++;
@@ -39,10 +39,10 @@ int ft_read_input(char *input, va_list *list)
 	return (count);
 }
 
-int ft_printf(const char *input, ...)
+int	ft_printf(const char *input, ...)
 {
-	va_list list;
-	int count;
+	va_list	list;
+	int		count;
 
 	count = 0;
 	va_start(list, input);
